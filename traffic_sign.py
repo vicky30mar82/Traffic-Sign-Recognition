@@ -110,3 +110,10 @@ clas = np.argmax(pred, axis = 1)
 #Accuracy with the test data
 from sklearn.metrics import accuracy_score
 print(accuracy_score(labels, pred))
+
+import pickle
+
+model_file = "traffic_rsign_recognition.pkl"
+
+with open(model_file,'wb') as file:
+    pickle.dump(model, file)
